@@ -43,7 +43,7 @@
                
 
                 <Label Content="User Name" Canvas.Left="100" Canvas.Top="34" FontSize="14"></Label>
-                <TextBox Text="Enter your name" Canvas.Top="38" Canvas.Left="180"  HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+                <TextBox Text="Enter your Name" Canvas.Top="38" Canvas.Left="180"  HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
                 
                 <Label Content="Password" Canvas.Top="73" Canvas.Left="105"  FontSize="14"></Label>
                 <TextBox Text="Enter your Password" Canvas.Top="77" Canvas.Left="180"   ></TextBox>
