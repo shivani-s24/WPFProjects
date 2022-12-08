@@ -9,6 +9,6 @@
       Title="SignUp">
 
     <Grid>
-        
+        <TextBox Text="This is sign Up page"></TextBox>
     </Grid>
 </Page>

@@ -9,6 +9,6 @@
       Title="Home">
 
     <Grid>
-        
+        <TextBox >This is Home page</TextBox>
     </Grid>
 </Page>
