@@ -6,9 +6,71 @@
       xmlns:local="clr-namespace:Pranav_Flappy"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SignUp">
+      Title="SignUp"   Background="{DynamicResource BackgroundRef}" >
 
-    <Grid>
-        <TextBox Text="This is sign Up page"></TextBox>
+    <Page.Resources>
+
+        <Style TargetType="Button" x:Key="AddBtn">
+
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="LightGreen"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Width" Value="85"/>
+                </Trigger>
+                <DataTrigger Binding="{Binding ElementName= Role, Path= SelectedIndex }" Value = "0">
+                    <Setter Property="Background" Value="LightGray"/>
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <Style BasedOn="{StaticResource AddBtn}" TargetType="Button" x:Key="ClsBtn">
+            <Setter Property="Background" Value="#b88d8d"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName= Role, Path= SelectedIndex }" Value = "0">
+                    <Setter Property="Background" Value="#b88d8d"/>
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+    </Page.Resources>
+
+    <Grid  >
+        <Border BorderBrush="Black" BorderThickness="5" Height="300" Width="400" Background="LightGray">
+            <Canvas   >
+
+                <Label Content="Game Name" Canvas.Top="5" Canvas.Left="20" />
+                <TextBox Name="uName"   Canvas.Top="8" Canvas.Left="100" Width="150" Height="20" />
+
+                <Label Content="Email ID" Canvas.Top="30" Canvas.Left="20"  />
+                <TextBox Name="EID" Canvas.Top="35" Canvas.Left="100" Width="150" Height="20"/>
+
+                <Label Content="Gender" Canvas.Top="60" Canvas.Left="20"  />
+                <RadioButton Name="male" Content="Male" Canvas.Top="67" Canvas.Left="100"  />
+                <RadioButton Name="female" Content="Female" Canvas.Top="67" Canvas.Left="170"  />
+                <RadioButton Name="NA" Content="Not want to reveal" Canvas.Top="68" Canvas.Left="250" />
+
+                <Label Content="Create Password" Canvas.Top="90" Canvas.Left="20"  />
+                <PasswordBox Name="Pass" Canvas.Top="90" Canvas.Left="100" Width="150" Height="20"/>
+
+                <Label Content="Re-Enter Password" Canvas.Top="130" Canvas.Left="20"  />
+                <PasswordBox Name="RePass" Canvas.Top="130" Canvas.Left="100" Width="150" Height="20"/>
+
+
+                <Button Content="Add" Style="{StaticResource AddBtn}"  Canvas.Top="302" Canvas.Left="239"   Click="Add_Button"/>
+
+                <Button Content="Close" Style="{StaticResource ClsBtn}"   Canvas.Top="235" Canvas.Left="58"  Click="Close_Button"/>
+
+
+            </Canvas>
+        </Border>
     </Grid>
 </Page>

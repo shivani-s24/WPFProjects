@@ -24,7 +24,19 @@ namespace Pranav_Flappy
         {
             InitializeComponent();
         }
+        SignUp signup = new SignUp();
+        Home homepg= new Home();    
 
-       
+
+        private void Login(object sender, RoutedEventArgs e)
+        {
+            this.Content= homepg;
+        }
+
+        private void SignUpBtn(object sender, RoutedEventArgs e)
+        {
+
+            this.Content= signup;
+        }
     }
 }
