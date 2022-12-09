@@ -36,7 +36,8 @@ namespace Pranav_Flappy
         private void SignUpBtn(object sender, RoutedEventArgs e)
         {
 
-            this.Content= signup;
+            this.Hide();
+            signup.Show();
         }
     }
 }

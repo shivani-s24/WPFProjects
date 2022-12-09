@@ -22,7 +22,7 @@ namespace Pranav_Flappy
     /// <summary>
     /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class SignUp : Page
+    public partial class SignUp : Window
     {
         public List<string> data = new List<string>();
         public int close = 0;
@@ -36,10 +36,7 @@ namespace Pranav_Flappy
         {
             string name = uName.Text;
             string email = EID.Text;
-            bool m = (bool)male.IsChecked;
-            bool f = (bool)female.IsChecked;
-            bool n = (bool)NA.IsChecked;
-            if (name == "" || email == "" || !(m == true || f == true || n == true) )
+            if (name == "" || email == ""  )
             {
                 MessageBox.Show("INVALID Input !!");
                 this.Resources["BackgroundRef"] = new SolidColorBrush(Colors.DarkRed);
@@ -47,7 +44,7 @@ namespace Pranav_Flappy
             }
             else
             {
-                string form = string.Format("\nName: " + name + " \nEmailID: " + email + "\nMale: {0}  Female: {1}  NA: {2} \nRole: {3}", m, f, n);
+                string form = string.Format("\nName: " + name + " \nEmailID: ");
 
 
                 if (MessageBox.Show(form, "Check!!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
@@ -64,9 +61,6 @@ namespace Pranav_Flappy
 
                 uName.Text = "";
                 EID.Text = "";
-                male.IsChecked = false;
-                female.IsChecked = false;
-                NA.IsChecked = false;
 
                 MessageBox.Show("Details Entered Succesfully");
 
@@ -100,9 +94,15 @@ namespace Pranav_Flappy
              e.Cancel = true;
          }*/
 
-        
+        private void MainPg(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MainWindow mw = new MainWindow();
+            mw.Show();
 
-        private void Role_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        }
+
+            private void Role_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Console.WriteLine("Checking the combo box - " + sender);
         }
