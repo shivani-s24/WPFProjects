@@ -18,11 +18,18 @@ namespace Pranav_Flappy
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class Home : Window
     {
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mw = new MainWindow();
+            mw.Show();
         }
     }
 }

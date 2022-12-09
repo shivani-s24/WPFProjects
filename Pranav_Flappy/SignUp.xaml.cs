@@ -96,7 +96,7 @@ namespace Pranav_Flappy
 
         private void MainPg(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             MainWindow mw = new MainWindow();
             mw.Show();
 

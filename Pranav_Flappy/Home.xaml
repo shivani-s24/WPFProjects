@@ -1,4 +1,4 @@
-﻿<Page x:Class="Pranav_Flappy.Home"
+﻿<Window x:Class="Pranav_Flappy.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,6 +9,8 @@
       Title="Home">
 
     <Grid>
-        <TextBox >This is Home page</TextBox>
+        
+        <Button Click="Logout" Height="30" Width="60" Margin="10,10,730,410">LogOut</Button>
+        <TextBox  HorizontalAlignment="Center" VerticalAlignment="Center">This is Home page</TextBox>
     </Grid>
-</Page>
+</Window>

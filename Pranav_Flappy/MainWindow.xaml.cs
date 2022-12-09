@@ -30,13 +30,14 @@ namespace Pranav_Flappy
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            this.Content= homepg;
+            this.Close();
+            homepg.Show();
         }
 
         private void SignUpBtn(object sender, RoutedEventArgs e)
         {
 
-            this.Hide();
+            this.Close();
             signup.Show();
         }
     }
